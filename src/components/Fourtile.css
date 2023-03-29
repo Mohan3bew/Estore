@@ -1,0 +1,22 @@
+.fourtile{
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+    margin:15px;
+    width : 27vw;
+}
+.fourtileitem{
+    padding:15px  !important   
+}
+.t1{
+    padding:5px
+}
+.t2{
+    padding:5px
+}
+.t3{
+    padding:5px
+}
+.t4{
+    padding:5px
+}
