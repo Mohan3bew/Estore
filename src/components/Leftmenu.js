@@ -56,31 +56,8 @@ function Leftmenu(props) {
   return (
     <Box>
       <Header handleDrawerToggle={handleDrawerToggle} />
-      <Box sx={{ display: "flex", overflow: "visible" }}>
-        <CssBaseline />
-
-        {/* <AppBar
-        position="fixed"
-        sx={{
-          width: "100%",
-          zIndex: (theme) => theme.zIndex.drawer + 1,
-        }}
-      >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Responsive drawer
-          </Typography>
-        </Toolbar>
-      </AppBar> */}
+      <Box sx={{ display: "flex" }}>
+        {/* <CssBaseline /> */}
 
         <Box
           component="nav"
@@ -128,11 +105,12 @@ function Leftmenu(props) {
         <Box
           component="main"
           sx={{
+            position: "relative",
             mr: 30,
             padding: "40",
-            width: { sm: `calc(100% - ${drawerWidth}px)` },
-            height: 350,
-            overflow: "visible",
+            width: "80%",
+            height: "350",
+            overflow: "hidden",
           }}
         >
           <Carousel />

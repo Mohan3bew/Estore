@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="app">
       <Leftmenu />
-      {/* <Carousel iamges={homeimg} /> */}
+      {/* <Carousel images={homeimg} /> */}
       {/* <Tile title='Trending in your area'/>
       <Slider images={images}/> */}
       {/* <Cardslider images={images}/> */}
