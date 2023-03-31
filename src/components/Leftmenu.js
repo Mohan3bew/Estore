@@ -12,20 +12,16 @@ import Toolbar from "@mui/material/Toolbar";
 import { Typography } from "@mui/material";
 import Header from "./Header";
 import Carousel from "./Carousel";
+import { red } from "@mui/material/colors";
 const drawerWidth = 200;
 
 function Leftmenu(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(true);
-  // const [menuclick, setmenuclick] = React.useState(false);
-
-  // const handlemenuclick = () => {
-  //   setmenuclick(!menuclick);
-  //   console.log(menuclick);
-  // };
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+    console.log(mobileOpen);
   };
 
   const drawer = (
@@ -61,7 +57,7 @@ function Leftmenu(props) {
 
         <Box
           component="nav"
-          sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+          sx={{ width: { sm: drawerWidth } }}
           aria-label="mailbox folders"
         >
           {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -103,17 +99,29 @@ function Leftmenu(props) {
           </Drawer>
         </Box>
         <Box
-          component="main"
+          component="main" //you can chamge this to alter the carousel and small box beside it
           sx={{
-            position: "relative",
-            mr: 30,
-            padding: "40",
-            width: "80%",
-            height: "350",
-            overflow: "hidden",
+            width: `calc(100% - ${drawerWidth}px)`,
+            height: "70vh",
+            display: "flex",
+            marginTop: "64px",
           }}
         >
-          <Carousel />
+          <Box //box for carousel
+            sx={{
+              backgroundColor: "red",
+              position: "relative",
+              width: "90%",
+              height: "100%",
+              overflow: "hidden",
+            }}
+          >
+            <Carousel />
+          </Box>
+
+          <Box
+            sx={{ backgroundColor: "green", width: "10%" }} //box  for carousel
+          ></Box>
         </Box>
       </Box>
     </Box>

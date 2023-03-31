@@ -37,7 +37,6 @@ function Carousel(props) {
             component="img"
             sx={{
               minWidth: "100%",
-              padding: "75px 0",
               boxSizing: "border-box",
             }}
             src={img.src}
@@ -49,6 +48,7 @@ function Carousel(props) {
         className="scrollcarouselleft"
         onClick={handleprevious}
         sx={{
+          zIndex: (theme) => theme.zIndex.drawer + 1,
           position: "absolute",
           top: "40%",
           left: "10px",
@@ -61,6 +61,7 @@ function Carousel(props) {
         className="scrollcarouselright"
         onClick={handlenext}
         sx={{
+          zIndex: (theme) => theme.zIndex.drawer + 1,
           position: "absolute",
           top: "40%",
           right: "10px",
