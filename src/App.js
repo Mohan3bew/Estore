@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
 import Carousel from "./components/Carousel";
-
 import Tile from "./components/Tile";
 import homeimg from "./components/Dashboardimg";
 import Slider from "./components/Slider";
@@ -23,7 +22,7 @@ function App() {
       {/* <Carousel images={homeimg} /> */}
       {/* <Tile title='Trending in your area'/>
       <Slider images={images}/> */}
-      {/* <Cardslider images={images}/> */}
+      <Cardslider images={images} />
     </div>
   );
 }

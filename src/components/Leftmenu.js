@@ -102,7 +102,7 @@ function Leftmenu(props) {
           component="main" //you can chamge this to alter the carousel and small box beside it
           sx={{
             width: `calc(100% - ${drawerWidth}px)`,
-            height: "70vh",
+            height: "60vh",
             display: "flex",
             marginTop: "64px",
           }}
@@ -111,16 +111,19 @@ function Leftmenu(props) {
             sx={{
               backgroundColor: "red",
               position: "relative",
-              width: "90%",
-              height: "100%",
               overflow: "hidden",
+              borderRadius: "20px",
+              margin: "20px",
             }}
           >
             <Carousel />
           </Box>
 
           <Box
-            sx={{ backgroundColor: "green", width: "10%" }} //box  for carousel
+            sx={{
+              backgroundColor: "green",
+              minWidth: "200px",
+            }} //box  for beside carousel.
           ></Box>
         </Box>
       </Box>

@@ -48,7 +48,7 @@ function Carousel(props) {
         className="scrollcarouselleft"
         onClick={handleprevious}
         sx={{
-          zIndex: (theme) => theme.zIndex.drawer + 1,
+          zIndex: (theme) => theme.zIndex.drawer,
           position: "absolute",
           top: "40%",
           left: "10px",
@@ -61,7 +61,7 @@ function Carousel(props) {
         className="scrollcarouselright"
         onClick={handlenext}
         sx={{
-          zIndex: (theme) => theme.zIndex.drawer + 1,
+          zIndex: (theme) => theme.zIndex.drawer,
           position: "absolute",
           top: "40%",
           right: "10px",
