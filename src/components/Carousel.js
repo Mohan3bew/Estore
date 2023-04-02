@@ -29,7 +29,6 @@ function Carousel(props) {
           width: "100%",
           height: "100%",
         }}
-        className="carousel-images"
         style={{ transform: `translateX(${-currentIndex * 100}%)` }}
       >
         {homeimg.map((img) => (
@@ -45,7 +44,6 @@ function Carousel(props) {
         ))}
       </Box>
       <ArrowBackIosIcon
-        className="scrollcarouselleft"
         onClick={handleprevious}
         sx={{
           zIndex: (theme) => theme.zIndex.drawer,
@@ -58,7 +56,6 @@ function Carousel(props) {
         }}
       />
       <ArrowForwardIosIcon
-        className="scrollcarouselright"
         onClick={handlenext}
         sx={{
           zIndex: (theme) => theme.zIndex.drawer,
