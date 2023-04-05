@@ -1,10 +1,4 @@
-.fourtile{
-    display: flex;
-    justify-content: center;
-    background-color: aqua;
-    margin:15px;
-    width : 27vw;
-}
+
 .fourtileitem{
     padding:15px  !important   
 }

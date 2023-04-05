@@ -1,38 +1,81 @@
-
-import React from 'react';
-import { Card, CardContent, Grid, Typography } from '@mui/material';
-import './Fourtile.css'
-
-
+import React from "react";
+import { Card, CardContent, Grid, Typography, Box } from "@mui/material";
+// import "./Fourtile.css";
 
 function Tile(props) {
   return (
-    <Card className='fourtile'>
+    <Card
+      sx={{
+        backgroundColor: "aqua",
+        margin: "15px auto",
+      }}
+    >
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          See what's trending in your area. 
+          See what's trending in your area............
         </Typography>
-        <div className='blocks'>
-        <Grid container spacing={2}>
-          <Grid className='fourtileitem' item xs={6}>
-          <a href="www.google.com"><img src="https://via.placeholder.com/150" alt="image1" /></a>
-          <a href="www.google.com">Image 1</a>
+        <Box
+          display="flex"
+          justifyContent="center"
+          sx={{
+            backgroundColor: "red",
+          }}
+        >
+          <Grid container spacing={0}>
+            <Grid item xs={6}>
+              <Box
+                display="flex"
+                flexDirection="column"
+                backgroundColor="yellow"
+                alignItems="center"
+              >
+                <a href="www.google.com">
+                  <img src="https://via.placeholder.com/150" alt="image1" />
+                </a>
+                <a href="www.google.com">Image 1</a>
+              </Box>
+            </Grid>
+            <Grid item xs={6}>
+              <Box
+                display="flex"
+                flexDirection="column"
+                backgroundColor="yellow"
+                alignItems="center"
+              >
+                <a href="www.google.com">
+                  <img src="https://via.placeholder.com/150" alt="image1" />
+                </a>
+                <a href="www.google.com">Image 1</a>
+              </Box>
+            </Grid>
+            <Grid item xs={6}>
+              <Box
+                display="flex"
+                flexDirection="column"
+                backgroundColor="yellow"
+                alignItems="center"
+              >
+                <a href="www.google.com">
+                  <img src="https://via.placeholder.com/150" alt="image1" />
+                </a>
+                <a href="www.google.com">Image 1</a>
+              </Box>
+            </Grid>
+            <Grid item xs={6}>
+              <Box
+                display="flex"
+                flexDirection="column"
+                backgroundColor="yellow"
+                alignItems="center"
+              >
+                <a href="www.google.com">
+                  <img src="https://via.placeholder.com/150" alt="image1" />
+                </a>
+                <a href="www.google.com">Image 1</a>
+              </Box>
+            </Grid>
           </Grid>
-          <Grid className='fourtileitem' item xs={6}>
-          <a href="www.google.com"><img src="https://via.placeholder.com/150" alt="image1" /></a>
-          <a href="www.google.com">Image 1</a>
-          </Grid>
-          <Grid className='fourtileitem' item xs={6}>
-          <a href="www.google.com"><img src="https://via.placeholder.com/150" alt="image1" /></a>
-          <a href="www.google.com">Image 1</a>
-          </Grid>
-          <Grid className='fourtileitem' item xs={6}>
-          <a href="www.google.com"><img src="https://via.placeholder.com/150" alt="image1" /></a>
-          <a href="www.google.com">Image 1</a>
-          </Grid>
-        </Grid>
-        </div>
-        
+        </Box>
       </CardContent>
     </Card>
   );
@@ -44,7 +87,6 @@ export default Tile;
 // import './Fourtile.css'
 // import ProductCategory from './ProductCategory'
 
-
 // function Tile(props) {
 //   return (
 //     <div className='fourtileouter'>
@@ -55,7 +97,7 @@ export default Tile;
 //         <div className='t4'><ProductCategory category={props.c4name} img={props.c4url}/></div>
 //     </div>
 //     </div>
-    
+
 //   )
 // }
 

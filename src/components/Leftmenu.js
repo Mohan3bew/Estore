@@ -25,7 +25,7 @@ function Leftmenu(props) {
   };
 
   const drawer = (
-    <div>
+    <Box>
       <Toolbar />
       <Divider />
       <List>
@@ -43,7 +43,7 @@ function Leftmenu(props) {
           </ListItem>
         ))}
       </List>
-    </div>
+    </Box>
   );
 
   const container =
@@ -123,6 +123,8 @@ function Leftmenu(props) {
             sx={{
               backgroundColor: "green",
               minWidth: "200px",
+              borderRadius: "20px",
+              margin: "10px",
             }} //box  for beside carousel.
           ></Box>
         </Box>

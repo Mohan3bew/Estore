@@ -11,7 +11,6 @@ import {
 } from "@mui/material";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { grey } from "@mui/material/colors";
 
 function Cardslider(props) {
   const [position, setPosition] = useState(0);
@@ -28,10 +27,11 @@ function Cardslider(props) {
     <Box
       sx={{
         position: "relative",
-        width: "50vw",
-        height: "60vh",
+        width: "75vw",
+        height: "80vh",
         outline: "2px solid",
-        margin: "2rem auto",
+        margin: "5rem auto",
+        backgroundColor: "grey",
       }}
     >
       <Box
@@ -80,11 +80,18 @@ function Cardslider(props) {
           display: "flex",
           width: "100%",
           height: "100%",
+          boxSizing: "border-box",
+          overflow: "hidden",
         }}
       >
         {props.images.map((img, index) => (
           <Card
-            sx={{ minWidth: "25%", padding: "1rem", boxSizing: "border-box" }}
+            sx={{
+              minWidth: "calc(25% - 2rem)",
+              padding: "1rem",
+              margin: "1rem",
+              boxSizing: "border-box",
+            }}
           >
             <CardMedia sx={{ height: 140 }} image={img} title="green iguana" />
             <CardContent>

@@ -187,8 +187,10 @@ export default function Header(props) {
     <Box>
       <AppBar
         position="fixed"
-        color="secondary"
-        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        sx={{
+          zIndex: (theme) => theme.zIndex.drawer + 1,
+          backgroundColor: "grey",
+        }}
       >
         <Toolbar>
           <IconButton
