@@ -51,7 +51,12 @@ function Leftmenu(props) {
 
   return (
     <Box>
-      <Header handleDrawerToggle={handleDrawerToggle} />
+      <Header
+        handleDrawerToggle={handleDrawerToggle}
+        handlelogin={props.handlelogin}
+        handlelogout={props.handlelogout}
+        login={props.login}
+      />
       <Box sx={{ display: "flex" }}>
         {/* <CssBaseline /> */}
 

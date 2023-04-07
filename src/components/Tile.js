@@ -30,7 +30,7 @@ function Tile(props) {
                 alignItems="center"
               >
                 <a href="www.google.com">
-                  <img src="https://via.placeholder.com/150" alt="image1" />
+                  <img src="https://via.placeholder.com/210" alt="image1" />
                 </a>
                 <a href="www.google.com">Image 1</a>
               </Box>

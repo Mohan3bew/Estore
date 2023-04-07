@@ -9,20 +9,27 @@ import Cardslider from "./components/Cardslider";
 import Leftmenu from "./components/Leftmenu";
 import { Button, Grid } from "@mui/material";
 import Box from "@mui/material/Box";
+import Appdivider from "./components/Appdivider";
+import Loginform from "./components/Loginform";
 
 function App() {
-  let [page_category, set_page_category] = useState(0);
-  console.log(page_category);
-  function handlechange(newvalue) {
-    set_page_category(newvalue);
+  let [login, setLogin] = useState(false);
+
+  function handlelogin() {
+    setLogin(true);
+  }
+  function handlelogout() {
+    setLogin(false);
   }
 
   return (
     <Box className="app" sx={{ margin: "0", padding: "0" }}>
-      <Leftmenu />
-      {/* <Carousel images={homeimg} /> */}
-
-      {/* <Slider images={images}/>  */}
+      <Leftmenu
+        handlelogin={handlelogin}
+        handlelogout={handlelogout}
+        login={login}
+      />
+      <Appdivider text="Today's Picks" />
       <Cardslider images={images} />
       <Box sx={{ display: "flex", justifyContent: "center" }}>
         <Button variant="contained"> View All Products</Button>

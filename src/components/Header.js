@@ -16,6 +16,8 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { Button } from "@mui/material";
+import Loginform from "./Loginform";
+import Signupform from "./Signupform";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -60,10 +62,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Header(props) {
-  const [loggedin, setloggedin] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-
+  const [loginopen, setloginOpen] = React.useState(false);
+  const [signupopen, setsignupOpen] = React.useState(false);
+  const handleloginOpen = () => setloginOpen(true);
+  const handleloginClose = () => setloginOpen(false);
+  const handlesignupOpen = () => setsignupOpen(true);
+  const handlesignupClose = () => setsignupOpen(false);
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
@@ -223,7 +229,7 @@ export default function Header(props) {
 
           <Box sx={{ flexGrow: 1 }} />
 
-          {loggedin ? (
+          {props.login ? (
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
               <IconButton
                 size="large"
@@ -257,12 +263,22 @@ export default function Header(props) {
             </Box>
           ) : (
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              <Button sx={{ m: 1 }} variant="contained">
+              {/* <Button sx={{ m: 1 }} variant="contained">
                 LOGIN
-              </Button>
-              <Button sx={{ m: 1 }} variant="contained">
+              </Button> */}
+              <Loginform
+                loginopen={loginopen}
+                handleloginOpen={handleloginOpen}
+                handleloginClose={handleloginClose}
+              />
+              <Signupform
+                signupopen={signupopen}
+                handlesignupOpen={handlesignupOpen}
+                handlesignupClose={handlesignupClose}
+              />
+              {/* <Button sx={{ m: 1 }} variant="contained">
                 SIGN UP
-              </Button>
+              </Button> */}
             </Box>
           )}
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
@@ -279,7 +295,7 @@ export default function Header(props) {
           </Box>
         </Toolbar>
       </AppBar>
-      {loggedin ? renderMobileMenu : loginrenderMobileMenu}
+      {props.login ? renderMobileMenu : loginrenderMobileMenu}
       {renderMenu}
     </Box>
   );
